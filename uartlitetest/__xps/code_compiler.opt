@@ -1,0 +1,22 @@
+microblaze_0
+CODE_SOURCES = Code/Code.c 
+CODE_HEADERS = 
+CODE_CC = mb-gcc
+CODE_CC_SIZE = mb-size
+CODE_CC_OPT = -O2
+CODE_CFLAGS = 
+CODE_CC_SEARCH = # -B
+CODE_LIBPATH = -L./microblaze_0/lib/ # -L
+CODE_INCLUDES = -I./microblaze_0/include/ # -I
+CODE_LFLAGS = # -l
+CODE_LINKER_SCRIPT = Code/Code_linker_script.ld
+CODE_CC_DEBUG_FLAG =  -g 
+CODE_CC_PROFILE_FLAG = # -pg
+CODE_CC_GLOBPTR_FLAG= # -mxl-gp-opt
+CODE_MODE = executable
+CODE_LIBG_OPT = -$(CODE_MODE) microblaze_0
+CODE_CC_INFERRED_FLAGS= -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b 
+CODE_CC_START_ADDR_FLAG=  #  # -Wl,-defsym -Wl,_TEXT_START_ADDR=
+CODE_CC_STACK_SIZE_FLAG=  #  # -Wl,-defsym -Wl,_STACK_SIZE=
+CODE_CC_HEAP_SIZE_FLAG=  #  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(CODE_CC_INFERRED_FLAGS)  \
